@@ -1,12 +1,14 @@
 const path = require('path');
-//const ExtractTextPlugin = require("extract-text-webpack-plugin");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+const miniCss = require('mini-css-extract-plugin');
 
 module.exports = {
+    mode: 'production',
     entry: './src/index.js',
     output: {
       filename: 'bundle.js',
       path: path.resolve(__dirname, 'prod'),
-      publicPath: '/',
+      publicPath: './',
     },
     module: {
     rules: [
@@ -17,7 +19,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['@babel/preset-env', { targets: "defaults" }]
+              ['@babel/preset-env'],['@babel/preset-react']
             ]
           }
         }
@@ -25,18 +27,29 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          "style-loader",
+          // Creates `style` nodes from JS strings
+          //"style-loader",
+          miniCss.loader,
+          // Translates CSS into CommonJS
           "css-loader",
+          // Compiles Sass to CSS
           "sass-loader",
         ],
       },
       {
-        test: /\.html$/i,
-        loader: 'html-loader',
-      },
+        test: /\.html$/,
+        loader: 'html-loader'
+      }
     ]
-},
+}, plugins: [
+  new miniCss({
+    filename: 'style.css',
+  }),
+  new HtmlWebpackPlugin({
+    template: '!!html-loader!src/index.html'
+  })
+  ],
 devServer: {
-  contentBase: './dev',
+  contentBase: './prod',
 }
 };

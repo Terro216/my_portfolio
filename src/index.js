@@ -1,7 +1,11 @@
-function component() {
-    const element = document.createElement('div');
-    element.innerHTML = ('Hello there');
-    return element;
-  }
-  
-  document.body.appendChild(component());
+import './styles.scss';
+import React, { useState } from "react";
+import { render } from "react-dom";
+
+function App() {
+  const [state, setState] = useState("CLICK ME");
+
+  return <button onClick={() => setState("CLICKED")}>{state}</button>;
+}
+
+render(<App />, document.getElementById("root"));

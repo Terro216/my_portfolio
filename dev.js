@@ -4,7 +4,6 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 
 const app = express();
 const path = require('path');
-const port = 3000;
 const config = require('./webpack.config.js');
 const compiler = webpack(config);
 
@@ -18,4 +17,4 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/prod/index.html'));
 });
 
-app.listen(port, () => console.log(`listening on port ${port}!`));
+app.listen(3000, () => console.log(`listening on port ${port}!`));
