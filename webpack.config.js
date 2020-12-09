@@ -3,10 +3,9 @@ const path = require('path');
 
 module.exports = {
     entry: './src/index.js',
-    mode: 'development',
     output: {
-      filename: 'index.js',
-      path: path.resolve(__dirname, 'app'),
+      filename: 'bundle.js',
+      path: path.resolve(__dirname, 'prod'),
       publicPath: '/',
     },
     module: {
@@ -38,6 +37,6 @@ module.exports = {
     ]
 },
 devServer: {
-  contentBase: './app',
+  contentBase: './dev',
 }
 };
