@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import './app.scss'
+import Modal from './modal.js'
 import dreamer from './files/dreamer.jpg';
 import m from './files/mariam.png';
 import cinema from './files/cinema.png';
@@ -10,12 +11,27 @@ import quotes from './files/quotes.png';
 import ren from './files/ren.png'
 
 function App() {
+
+    const [modalState, changeState] = useState({
+        state:0,
+        modalImg: cinema,
+        modalTitle: '',
+        modalDesc:'',
+        modalSite:'',
+        modalSrc:''
+    });
+
+    function toggleModal(img,title,desc,site,src) {
+        (modalState.state===0)?changeState({state:1,modalTitle:title,modalImg:img,modalDesc:desc,modalSite:site,modalSrc:src}):changeState({state:0});
+    }
+
     return(
         <div className='app-wrapper'>
+        <Modal exit={toggleModal} state={modalState.state} img={modalState.modalImg} title={modalState.modalTitle} desc={modalState.modalDesc} site={modalState.modalSite} src={modalState.modalSrc} />
             <header className='welcome'>
                 <div className='welcome-text'>
                     <h1>Привет!</h1><br></br>
-                    <h3>Меня зовут Илья, я сделал этот сайт и еще не придумал что сюда написать</h3>
+                    <h3>Меня зовут Илья, это мой сайт и еще не придумал что сюда написать</h3>
                     
                 </div>
 
@@ -96,87 +112,40 @@ function App() {
                 <h1>Мои работы:</h1>
                 <div className='cards'>
 
-                    <div className='card'>
+                    <div className='card' onClick={()=>{toggleModal(cinema,'Онлайн кинотеатр','Онлайн кинотеатр на реакте с использованием react-routing и api кинопоиска','https://terro216.github.io/cinema-react','https://github.com/Terro216/cinema-react')}}>
                         <div className='card-img-wrapper'>
                         <img className='card-img' src={cinema}></img>
-                        <div className='card-text'>
-                            <h3>Онлайн кинотеатр</h3>
-                            <h4>Онлайн кинотеатр на реакте с использованием react-routing и api кинопоиска</h4>
-                            <div className='card-text-buttons'>
-                                <a className='link' href='https://terro216.github.io/cinema-react' target='_blank'>Открыть сайт</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a className='link' href='https://github.com/Terro216/cinema-react' target='_blank'>Посмотреть исходники</a>
-                            </div>
-                        </div></div>
+                        </div>
                     </div>
 
-                    <div className='card'>
+                    <div className='card' onClick={()=>{toggleModal(m,'Сайт менеджера по туризму','Одностраничный лендинг с функцией отправки мейлов с помощью php, верстал на HTML/CSS/Bootstrap. Один из первых сайтов.','http://mariamedtours.ru/',0)}}>
                         <div className='card-img-wrapper'>
                         <img className='card-img' src={m}></img>
-                        <div className='card-text'>
-                            <h3>Сайт менеджера по туризму</h3>
-                            
-                            <h4>Одностраничный лендинг с функцией отправки мейлов с помощью php, верстал на HTML/CSS/Bootstrap. Один из первых сайтов.</h4>
-                            
-                            <div className='card-text-buttons'>
-                                <a className='link' href='http://mariamedtours.ru/' target='_blank'>Открыть сайт</a>
-                            </div>
-                        </div></div>
+                        </div>
                     </div>
 
-                    <div className='card'>
+                    <div className='card' onClick={()=>{toggleModal(drum,'Drum Pad','Можно играть разные мелодии, нажимая на клавиши клавиатуры (или кнопки на экране). Реализовано возможность выключения и переключения инструментов.','https://terro216.github.io/fcc-portfolio/js/drum_machine/dist/index.html','https://github.com/Terro216/fcc-portfolio/tree/main/js/drum_machine/src')}}>
                         <div className='card-img-wrapper'>
                         <img className='card-img' src={drum}></img>
-                        <div className='card-text'>
-                            <div><h3>Drum Pad</h3>
-                            <h4>Можно играть разные мелодии, нажимая на клавиши клавиатуры (или кнопки на экране). Реализовано возможность выключения и переключения инструментов.</h4>
-                            </div><div className='card-text-buttons'>
-                                <a className='link' href='https://terro216.github.io/fcc-portfolio/js/drum_machine/dist/index.html' target='_blank'>Открыть сайт</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a className='link' href='https://github.com/Terro216/fcc-portfolio/tree/main/js/drum_machine/src' target='_blank'>Посмотреть исходники</a>
-                            </div>
-                        </div></div>
+                        </div>
                     </div>
 
-                    <div className='card'>
+                    <div className='card' onClick={()=>{toggleModal(ren,'Редактор Текста','Markdown редактор с видом результата при изменении','https://terro216.github.io/fcc-portfolio/js/react-markdown/dist/index.html','https://github.com/Terro216/fcc-portfolio/tree/main/js/react-markdown/src')}}>
                         <div className='card-img-wrapper'>
                         <img className='card-img' src={ren}></img>
-                        <div className='card-text'>
-                            <h3>Редактор текста</h3>
-                            <h4>Markdown редактор с видом результата при изменении</h4>
-                            <div className='card-text-buttons'>
-                                <a className='link' href='https://terro216.github.io/fcc-portfolio/js/react-markdown/dist/index.html' target='_blank'>Открыть сайт</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a className='link' href='https://github.com/Terro216/fcc-portfolio/tree/main/js/react-markdown/src' target='_blank'>Посмотреть исходники</a>
-                            </div>
-                        </div></div>
+                        </div>
                     </div>
 
-                    <div className='card'>
+                    <div className='card' onClick={()=>{toggleModal(quotes,'Цитаты известных людей','Небольшое приложение, показывающее разные цитаты по нажатию кнопки. Есть возможность поделиться в соц. сетях','https://terro216.github.io/fcc-portfolio/js/random_quote/dist/index.html','https://github.com/Terro216/fcc-portfolio/tree/main/js/random_quote/src')}}>
                         <div className='card-img-wrapper'>
                         <img className='card-img' src={quotes}></img>
-                        <div className='card-text'>
-                            <h3>Цитаты известных людей</h3>
-                            <h4>Небольшое приложение, показывающее разные цитаты по нажатию кнопки. Есть возможность поделиться в соц. сетях</h4>
-                            <div className='card-text-buttons'>
-                                <a className='link' href='https://terro216.github.io/fcc-portfolio/js/random_quote/dist/index.html' target='_blank'>Открыть сайт</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a className='link' href='https://github.com/Terro216/fcc-portfolio/tree/main/js/random_quote/src' target='_blank'>Посмотреть исходники</a>
-                            </div>
-                        </div></div>
+                        </div>
                     </div>
 
-                    <div className='card'>
+                    <div className='card' onClick={()=>{toggleModal(diary,'Дневник','Чистая вёрстка по макету за сутки в марафоне',0,'https://github.com/Terro216/diary-project')}}>
                         <div className='card-img-wrapper'>
                         <img className='card-img' src={diary}></img>
-                        <div className='card-text'>
-                            <h3>Дневник</h3>
-                            <h4>Чистая вёрстка по макету за сутки в марафоне</h4>
-                            <div className='card-text-buttons'>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a className='link' href='https://github.com/Terro216/diary-project' target='_blank'>Посмотреть исходники</a>
-                            </div>
-                        </div></div>
+                        </div>
                     </div>
 
                 </div>
