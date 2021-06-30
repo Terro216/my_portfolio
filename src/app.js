@@ -7,6 +7,7 @@ import cinema from './files/cinema.png';
 import diary from './files/diary.png';
 import drum from './files/drum.png';
 import quotes from './files/quotes.png';
+import ren from './files/ren.png'
 
 function App() {
     return(
@@ -97,23 +98,29 @@ function App() {
 
                     <div className='card'>
                         <div className='card-img-wrapper'>
-                        <img className='card-img' src={m}></img>
-                        <div className='card-text'>
-                            <h4>Сайт менеджера по туризму</h4>
-                            <p></p>
-                            <h6>Одностраничный лендинг с функцией отправки мейлов с помощью php, верстал на html/css/bootstrap. Один из первых сайтов.</h6>
-                            <p></p>
-                            <a className='' href='mariamedtours.ru' target='_blank'>Открыть сайт</a>
-                        </div></div>
-                    </div>
-                    
-                    <div className='card'>
-                        <div className='card-img-wrapper'>
                         <img className='card-img' src={cinema}></img>
                         <div className='card-text'>
-                            <h4>Онлайн кинотеатр</h4>
-                            <p></p>
-                            <h6>Текст</h6>
+                            <h3>Онлайн кинотеатр</h3>
+                            <h4>Онлайн кинотеатр на реакте с использованием react-routing и api кинопоиска</h4>
+                            <div className='card-text-buttons'>
+                                <a className='link' href='https://terro216.github.io/cinema-react' target='_blank'>Открыть сайт</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a className='link' href='https://github.com/Terro216/cinema-react' target='_blank'>Посмотреть исходники</a>
+                            </div>
+                        </div></div>
+                    </div>
+
+                    <div className='card'>
+                        <div className='card-img-wrapper'>
+                        <img className='card-img' src={m}></img>
+                        <div className='card-text'>
+                            <h3>Сайт менеджера по туризму</h3>
+                            
+                            <h4>Одностраничный лендинг с функцией отправки мейлов с помощью php, верстал на HTML/CSS/Bootstrap. Один из первых сайтов.</h4>
+                            
+                            <div className='card-text-buttons'>
+                                <a className='link' href='http://mariamedtours.ru/' target='_blank'>Открыть сайт</a>
+                            </div>
                         </div></div>
                     </div>
 
@@ -121,9 +128,27 @@ function App() {
                         <div className='card-img-wrapper'>
                         <img className='card-img' src={drum}></img>
                         <div className='card-text'>
-                            <h4>Драм-машина</h4>
-                            <p></p>
-                            <h6>Текст</h6>
+                            <div><h3>Drum Pad</h3>
+                            <h4>Можно играть разные мелодии, нажимая на клавиши клавиатуры (или кнопки на экране). Реализовано возможность выключения и переключения инструментов.</h4>
+                            </div><div className='card-text-buttons'>
+                                <a className='link' href='https://terro216.github.io/fcc-portfolio/js/drum_machine/dist/index.html' target='_blank'>Открыть сайт</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a className='link' href='https://github.com/Terro216/fcc-portfolio/tree/main/js/drum_machine/src' target='_blank'>Посмотреть исходники</a>
+                            </div>
+                        </div></div>
+                    </div>
+
+                    <div className='card'>
+                        <div className='card-img-wrapper'>
+                        <img className='card-img' src={ren}></img>
+                        <div className='card-text'>
+                            <h3>Редактор текста</h3>
+                            <h4>Markdown редактор с видом результата при изменении</h4>
+                            <div className='card-text-buttons'>
+                                <a className='link' href='https://terro216.github.io/fcc-portfolio/js/react-markdown/dist/index.html' target='_blank'>Открыть сайт</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a className='link' href='https://github.com/Terro216/fcc-portfolio/tree/main/js/react-markdown/src' target='_blank'>Посмотреть исходники</a>
+                            </div>
                         </div></div>
                     </div>
 
@@ -131,9 +156,13 @@ function App() {
                         <div className='card-img-wrapper'>
                         <img className='card-img' src={quotes}></img>
                         <div className='card-text'>
-                            <h4>Цитаты известных людей</h4>
-                            <p></p>
-                            <h6>Текст</h6>
+                            <h3>Цитаты известных людей</h3>
+                            <h4>Небольшое приложение, показывающее разные цитаты по нажатию кнопки. Есть возможность поделиться в соц. сетях</h4>
+                            <div className='card-text-buttons'>
+                                <a className='link' href='https://terro216.github.io/fcc-portfolio/js/random_quote/dist/index.html' target='_blank'>Открыть сайт</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a className='link' href='https://github.com/Terro216/fcc-portfolio/tree/main/js/random_quote/src' target='_blank'>Посмотреть исходники</a>
+                            </div>
                         </div></div>
                     </div>
 
@@ -141,9 +170,12 @@ function App() {
                         <div className='card-img-wrapper'>
                         <img className='card-img' src={diary}></img>
                         <div className='card-text'>
-                            <h4>Дневник</h4>
-                            <p></p>
-                            <h6>Текст</h6>
+                            <h3>Дневник</h3>
+                            <h4>Чистая вёрстка по макету за сутки в марафоне</h4>
+                            <div className='card-text-buttons'>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a className='link' href='https://github.com/Terro216/diary-project' target='_blank'>Посмотреть исходники</a>
+                            </div>
                         </div></div>
                     </div>
 
@@ -154,8 +186,10 @@ function App() {
 
             <div className='contact'>
                 <h1>Я в социальных сетях:</h1>
-                <a className='contact-mail' href='mailto:0ilya@bk.ru' onClick={() => {navigator.clipboard.writeText('0ilya@bk.ru');document.getElementsByClassName('contact-mail')[0].innerHTML='Адрес скопирован'}}
->Написать на почту</a>
+                <a className='contact-mail' href='mailto:0ilya@bk.ru' onClick={() => {
+                    navigator.clipboard.writeText('0ilya@bk.ru');document.getElementsByClassName('contact-mail')[0].innerHTML='Адрес скопирован'
+                    }}>
+                        Написать на почту</a>
 
                 <div className='contact-buttons'>
                 <div className='contact-button'>
@@ -175,5 +209,5 @@ function App() {
     );
 }
 
-export default App
-//ReactDOM.render(<App />, document.getElementById('root'));
+//export default App
+ReactDOM.render(<App />, document.getElementById('root'));
