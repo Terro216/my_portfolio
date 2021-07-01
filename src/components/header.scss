@@ -1,0 +1,46 @@
+
+    .welcome{
+        width:100vw;
+        height:100vh;
+        display: flex;
+        align-items: center;
+        #particles-js{
+            width:100vw;
+            height:100vh;
+            position: absolute;
+            top:0;bottom:0;right:0;left:0;
+        }
+        .welcome-text{
+            z-index:1;
+            font-size: 1.3em;
+            width:40vw;
+            padding:10%;
+            user-select: none;
+        }
+        .welcome-img{
+            z-index:1;
+            width:60vw;
+            color:grey;
+            pointer-events: none;
+            user-select: none;
+            .me {
+                width:100%;
+                height: auto;
+            }
+            figcaption {
+                text-align: center;
+            }
+        }
+        .arrow {
+            position: absolute;
+            display:block;
+            bottom:0;
+            left:50%;
+            right:50%;
+            margin-bottom:2%;
+            i{
+                font-size:3em;
+            }
+        
+        }
+    }

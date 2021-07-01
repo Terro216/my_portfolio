@@ -3,20 +3,25 @@
     <head>
         <title>Ilyamed</title>
         <style>
+            @font-face {
+                font-family: Nunito; 
+                src: url(files/Nunito.ttf); 
+            }
             body {
                 width:100vw;
                 height:100vh;
                 margin: 0; padding: 0;
                 background-color:#252839;
-                overflow-x:hidden;
+                overflow-x: hidden;
+                font-family: Nunito;
             }
         </style>
     </head>
     <body>
-        <div id='root'>
-            Enable javascript
-        </div>
+        <noscript>You must enable JavaScript to use this app.</noscript>
+        <div id='root'></div>
         <script src='./app.js'></script>
         <script src="https://kit.fontawesome.com/f5c02b8de6.js" crossorigin="anonymous"></script>
+        <script>particlesJS.load('particles-js', './particles.json');</script>
     </body>
 </html>

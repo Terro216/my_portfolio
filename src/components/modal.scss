@@ -1,0 +1,66 @@
+@import '../app.scss';
+
+.modal-wrapper {
+    display: block;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgb(80, 80, 80, 0.7);
+    z-index:2;
+    .close{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index:2;
+    }
+    .modal {
+        z-index: 3;
+        background-color: white;
+        border-radius: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color:black;
+        width:60vw;
+        height:75vh;
+        .img-wrapper {
+            max-width:40vw;
+            max-height:20vw;
+            .img {
+                height:100%;
+                width:100%;
+            }
+        }
+        .desc {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .links {
+            display: flex;
+            width:100%;
+            height: auto;
+            justify-content: space-around;
+            align-items: center;
+            .link {
+                padding: 2%;
+                text-decoration: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color:black;
+                font-size:1.3em;
+                border:1px solid black;
+                background-color:$main;
+                color:white;
+            }
+        }
+    }
+}
