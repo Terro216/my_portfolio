@@ -34607,8 +34607,8 @@ Object.keys(_web).forEach(function (key) {
     }
   });
 });
-},{"@react-spring/web":"../node_modules/@react-spring/web/dist/react-spring-web.esm.js"}],"files/dreamer.jpg":[function(require,module,exports) {
-module.exports = "/dreamer.b7bf320f.jpg";
+},{"@react-spring/web":"../node_modules/@react-spring/web/dist/react-spring-web.esm.js"}],"files/dreamer.png":[function(require,module,exports) {
+module.exports = "/dreamer.95843ad9.png";
 },{}],"components/header.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
@@ -34624,7 +34624,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _dreamer = _interopRequireDefault(require("../files/dreamer.jpg"));
+var _dreamer = _interopRequireDefault(require("../files/dreamer.png"));
 
 require("./header.scss");
 
@@ -34638,13 +34638,13 @@ function Header() {
   }, /*#__PURE__*/_react.default.createElement("div", {
     id: "particles-js"
   }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "welcome-text"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "\u041F\u0440\u0438\u0432\u0435\u0442!"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("h3", null, "\u041C\u0435\u043D\u044F \u0437\u043E\u0432\u0443\u0442 \u0418\u043B\u044C\u044F, \u044F \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043B\u0435\u0442 \u0437\u0430\u043D\u0438\u043C\u0430\u044E\u0441\u044C web-\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u043E\u0439 \u0438 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u043E\u0439 \u0441\u0430\u0439\u0442\u043E\u0432 \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u043E\u0439 \u0441\u043B\u043E\u0436\u043D\u043E\u0441\u0442\u0438 \u0432 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0435. \u042F \u0441\u0447\u0438\u0442\u0430\u044E, \u0447\u0442\u043E \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u0435 \u0441\u0430\u0439\u0442\u043E\u0432 - \u044D\u0442\u043E \u0438\u0441\u043A\u0443\u0441\u0441\u0442\u0432\u043E \u0438 \u0432\u0441\u0435\u0433\u0434\u0430 \u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043D\u043D\u043E \u043F\u043E\u0434\u0445\u043E\u0436\u0443 \u043A \u043F\u043E\u0440\u0443\u0447\u0435\u043D\u044B\u043C \u043C\u043D\u0435 \u0437\u0430\u0434\u0430\u0447\u0430\u043C.")), /*#__PURE__*/_react.default.createElement("div", {
     className: "welcome-img"
   }, /*#__PURE__*/_react.default.createElement("figure", null, /*#__PURE__*/_react.default.createElement("img", {
     className: "me",
     src: _dreamer.default
   }), /*#__PURE__*/_react.default.createElement("p", null), /*#__PURE__*/_react.default.createElement("figcaption", null, "\u042D\u0442\u043E \u044F"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "welcome-text"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "\u041F\u0440\u0438\u0432\u0435\u0442!"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("h3", null, "\u041C\u0435\u043D\u044F \u0437\u043E\u0432\u0443\u0442 \u0418\u043B\u044C\u044F, \u044F \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043B\u0435\u0442 \u0437\u0430\u043D\u0438\u043C\u0430\u044E\u0441\u044C web-\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u043E\u0439 \u0438 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u043E\u0439 \u0441\u0430\u0439\u0442\u043E\u0432 \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u043E\u0439 \u0441\u043B\u043E\u0436\u043D\u043E\u0441\u0442\u0438 \u0432 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0435. \u042F \u0441\u0447\u0438\u0442\u0430\u044E, \u0447\u0442\u043E \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u0435 \u0441\u0430\u0439\u0442\u043E\u0432 - \u044D\u0442\u043E \u0438\u0441\u043A\u0443\u0441\u0441\u0442\u0432\u043E \u0438 \u0432\u0441\u0435\u0433\u0434\u0430 \u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043D\u043D\u043E \u043F\u043E\u0434\u0445\u043E\u0436\u0443 \u043A \u043F\u043E\u0440\u0443\u0447\u0435\u043D\u043D\u044B\u043C \u043C\u043D\u0435 \u0437\u0430\u0434\u0430\u0447\u0430\u043C.")), /*#__PURE__*/_react.default.createElement("div", {
     className: "arrow"
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fa fa-arrow-down",
@@ -34654,7 +34654,7 @@ function Header() {
 
 var _default = Header;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../files/dreamer.jpg":"files/dreamer.jpg","./header.scss":"components/header.scss","react-spring":"../node_modules/react-spring/dist/react-spring.esm.js"}],"components/modal.scss":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../files/dreamer.png":"files/dreamer.png","./header.scss":"components/header.scss","react-spring":"../node_modules/react-spring/dist/react-spring.esm.js"}],"components/modal.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -35024,12 +35024,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Contact() {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "contact"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "\u042F \u0432 \u0441\u043E\u0446\u0438\u0430\u043B\u044C\u043D\u044B\u0445 \u0441\u0435\u0442\u044F\u0445:"), /*#__PURE__*/_react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "\u0421\u0432\u044F\u0437\u0430\u0442\u044C\u0441\u044F \u0441\u043E \u043C\u043D\u043E\u0439:"), /*#__PURE__*/_react.default.createElement("a", {
     className: "contact-mail",
     href: "mailto:me@ilyamed.site",
     onClick: function onClick() {
       navigator.clipboard.writeText('me@ilyamed.site');
-      document.getElementsByClassName('contact-mail')[0].innerHTML = 'Адрес скопирован';
+      document.getElementsByClassName('contact-mail')[0].innerText = 'Адрес скопирован';
     }
   }, "\u041D\u0430\u043F\u0438\u0441\u0430\u0442\u044C \u043D\u0430 \u043F\u043E\u0447\u0442\u0443"), /*#__PURE__*/_react.default.createElement("div", {
     className: "contact-buttons"
@@ -35177,7 +35177,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55719" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50193" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
