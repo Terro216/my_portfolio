@@ -1,4 +1,7 @@
 import React from "react";
+import webpack from '../files/webpack.svg'
+import py from '../files/py.svg'
+import parcel from '../files/parcel.svg'
 import './instruments.scss'
 
 function Instruments() {
@@ -28,12 +31,20 @@ function Instruments() {
                 <span>SCSS</span>
             </div>
             <div className='instrument'>
-                <i class="fab fa-git-alt fa-2x" style={{color:'#F1502F'}}></i>
-                <span>Git</span>
+                <img src={webpack}></img>
+                <span>Webpack</span>
+            </div>
+            <div className='instrument'>
+                <img src={parcel}></img>
+                <span>Parcel</span>
             </div>
             <div className='instrument'>
                 <i class="fab fa-github fa-2x github"></i>
                 <span>Github</span>
+            </div>
+            <div className='instrument'>
+                <i class="fab fa-git-alt fa-2x" style={{color:'#F1502F'}}></i>
+                <span>Git</span>
             </div>
             <div className='instrument'>
                 <i class="fab fa-node-js fa-2x" style={{color:'#68A063'}}></i>
@@ -56,7 +67,7 @@ function Instruments() {
                 <span>API</span>
             </div>
             <div className='instrument'>
-                <i class="fab fa-python fa-2x python"></i>
+                <img src={py}></img>
                 <span>Python</span>
             </div>
         </div>

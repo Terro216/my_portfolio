@@ -5,8 +5,8 @@ function Contact() {
     return(
             <div className='contact'>
                 <h1>Я в социальных сетях:</h1>
-                <a className='contact-mail' href='mailto:0ilya@bk.ru' onClick={() => {
-                    navigator.clipboard.writeText('0ilya@bk.ru');document.getElementsByClassName('contact-mail')[0].innerHTML='Адрес скопирован'
+                <a className='contact-mail' href='mailto:me@ilyamed.site' onClick={() => {
+                    navigator.clipboard.writeText('me@ilyamed.site');document.getElementsByClassName('contact-mail')[0].innerHTML='Адрес скопирован'
                     }}>
                         Написать на почту</a>
 

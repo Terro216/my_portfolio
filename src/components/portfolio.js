@@ -55,9 +55,9 @@ function Portfolio(props) {
 
                 <Card img={m} toggler={() => { props.toggler(m, 'Сайт менеджера по туризму', 'Одностраничный лендинг с функцией отправки мейлов с помощью php, верстал на HTML/CSS/Bootstrap. Один из первых сайтов.', 'http://mariamedtours.ru/', 0) }} />
 
-                <Card img={drum} toggler={() => { props.toggler(drum, 'Drum Pad', 'Можно играть разные мелодии, нажимая на клавиши клавиатуры (или кнопки на экране). Реализовано возможность выключения и переключения инструментов.', 'https://terro216.github.io/fcc-portfolio/js/drum_machine/dist/index.html', 'https://github.com/Terro216/fcc-portfolio/tree/main/js/drum_machine/src') }} />
+                <Card img={drum} toggler={() => { props.toggler(drum, 'Drum Pad', 'Можно играть разные мелодии, нажимая на клавиши клавиатуры (или кнопки на экране). Реализована возможность смены громкости и переключения инструментов.', 'https://terro216.github.io/fcc-portfolio/js/drum_machine/dist/index.html', 'https://github.com/Terro216/fcc-portfolio/tree/main/js/drum_machine/src') }} />
 
-                <Card img={ren} toggler={() => { props.toggler(ren, 'Редактор Текста', 'Markdown редактор с видом результата при изменении', 'https://terro216.github.io/fcc-portfolio/js/react-markdown/dist/index.html', 'https://github.com/Terro216/fcc-portfolio/tree/main/js/react-markdown/src') }} />
+                <Card img={ren} toggler={() => { props.toggler(ren, 'Редактор Текста', 'Markdown редактор на реакте с мгновенным видом результата во время редактирования', 'https://terro216.github.io/fcc-portfolio/js/react-markdown/dist/index.html', 'https://github.com/Terro216/fcc-portfolio/tree/main/js/react-markdown/src') }} />
 
                 <Card img={quotes} toggler={() => { props.toggler(quotes, 'Цитаты известных людей', 'Небольшое приложение, показывающее разные цитаты по нажатию кнопки. Есть возможность поделиться в соц. сетях', 'https://terro216.github.io/fcc-portfolio/js/random_quote/dist/index.html', 'https://github.com/Terro216/fcc-portfolio/tree/main/js/random_quote/src') }} />
 

@@ -28,10 +28,12 @@
                 &:hover {
                     filter:brightness(1.1)
                 }
+                img {   
+                    width:2em;
+                    height:2em;
+                }
                 .github {
-                    background-color:black;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: white;
+                    color:black;
                 }
                 .python {
                     background:linear-gradient(120deg, #ffde57, #4584b6);
