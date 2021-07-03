@@ -14,15 +14,23 @@
             z-index:1;
             font-size: 1.3em;
             width:40vw;
+            height:100vh;
             padding:10%;
             user-select: none;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
         }
         .welcome-img{
             z-index:1;
             width:60vw;
+            height:70vh;
             color:grey;
             pointer-events: none;
             user-select: none;
+            display:flex;
+            align-items: flex-end;
+            justify-content: center;
             .me {
                 width:100%;
                 height: auto;

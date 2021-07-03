@@ -1,6 +1,6 @@
 {
   "name": "my_portfolio",
-  "version": "0.7.0",
+  "version": "0.7.5",
   "description": "",
   "main": "index.html",
   "dependencies": {
@@ -12,7 +12,6 @@
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
     "cssnano": "^4.1.11",
-    "files": "^2.1.1",
     "gh-pages": "^3.2.3",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-static-files-copy": "^2.6.0",
@@ -44,7 +43,10 @@
     ]
   },
   "staticFiles": {
-    "staticPath": ["./src/files/particles.json"],
+    "staticPath": [
+      "./src/files/particles.json",
+      "./CNAME"
+    ],
     "watcherGlob": "**/*.json"
   }
 }

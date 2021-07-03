@@ -4,9 +4,9 @@ import './contact.scss'
 function Contact() {
     return(
             <div className='contact'>
-                <h1>Я в социальных сетях:</h1>
+                <h1>Связаться со мной:</h1>
                 <a className='contact-mail' href='mailto:me@ilyamed.site' onClick={() => {
-                    navigator.clipboard.writeText('me@ilyamed.site');document.getElementsByClassName('contact-mail')[0].innerHTML='Адрес скопирован'
+                    navigator.clipboard.writeText('me@ilyamed.site');document.getElementsByClassName('contact-mail')[0].innerText='Адрес скопирован'
                     }}>
                         Написать на почту</a>
 
