@@ -8,14 +8,14 @@ import quotes from '../files/quotes.png';
 import ren from '../files/ren.png';
 import { useSpring, animated } from 'react-spring'
 
-const calc = (x, y, rect) => [
-    -(y - rect.top - rect.height / 2) / 20,
-    (x - rect.left - rect.width / 2) / 20,
-    1.1
-];
-const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 const Card = (props) => {
+    const calc = (x, y, rect) => [
+        -(y - rect.top - rect.height / 2) / 20,
+        (x - rect.left - rect.width / 2) / 20,
+        1.1
+    ];
+    const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
     const ref = useRef(null);
     const [xys, set] = useState([0, 0, 1]);
     const config = ({
@@ -28,14 +28,12 @@ const Card = (props) => {
         easing: (t) => t
     });
     const s = useSpring({ xys, config });
-    console.log(props.info)
     return (
         <animated.div className='card' onClick={props.toggler} ref={ref}
             style={{ transform: s.xys.to(trans) }}
             onMouseLeave={() => set([0, 0, 1])}
             onMouseMove={(e) => {
                 const rect = ref.current.getBoundingClientRect();
-                console.log(rect)
                 set(calc(e.clientX, e.clientY, rect));
             }}>
             <div className='card-img-wrapper'>

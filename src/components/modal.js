@@ -2,7 +2,6 @@ import React from "react";
 import './modal.scss'
 
 function Modal(props) {
-    console.log(props)
     if (props.state===1) {
         return(
         <div className='modal-wrapper'>

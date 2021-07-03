@@ -8,6 +8,11 @@ import Modal from './components/modal.js';
 import Instruments from "./components/instruments.js";
 import Portfolio from "./components/portfolio.js";
 import Contact from "./components/contact.js";
+import Disclaimer from "./components/disclaimer.js";
+import {
+    BrowserView,
+    MobileView
+  } from "react-device-detect";
 
 
 function App() {
@@ -29,7 +34,7 @@ function App() {
 
     return(
         <animated.div style={bodyFade} className='app-wrapper'>
-
+<BrowserView>
         <Modal exit={toggleModal} state={modalState.state} img={modalState.modalImg} title={modalState.modalTitle} desc={modalState.modalDesc} site={modalState.modalSite} src={modalState.modalSrc} />
 
         <Header />  
@@ -39,6 +44,10 @@ function App() {
         <Portfolio toggler={toggleModal}/>
         
         <Contact />
+        </BrowserView>
+        <MobileView>
+            <Disclaimer />
+        </MobileView>
         </animated.div>
     );
 }
