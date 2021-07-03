@@ -46,7 +46,7 @@
   "staticFiles": {
     "staticPath": [
       "./src/files/particles.json",
-      "./CNAME"
+      "./CNAME","./src/cinema.html"
     ],
     "watcherGlob": "**/*.json"
   }
