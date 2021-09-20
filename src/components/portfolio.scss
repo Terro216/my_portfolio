@@ -23,6 +23,9 @@
                 margin-top:5%;
                 will-change: transform;
                 user-select: none;
+                @media screen and (max-width:$mob) {
+                    max-width:90vw;
+                }
                 &:hover{
                     box-shadow: dark 5px 5px;
                 }

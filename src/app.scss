@@ -2,12 +2,14 @@ $dop:#CC9966;//#f1b631;
 $main: #333366;//#252839;
 $card_width: 40vw;
 $card_height: 40vh;
+$mob: 450px;
 
 .app-wrapper{
     width:100%;
     height:100%;
     background-color: $main;
     color:white;
+    margin:0;padding:0;
     h1 {
         color: $dop;
         font-weight: 800;

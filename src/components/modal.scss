@@ -27,12 +27,35 @@
         color:black;
         width:60vw;
         height:75vh;
+        @media screen and (max-width:$mob) {
+            height:80vh; //на айфоне 5 вылезают кнопки...
+            width:100vw;
+            border-radius: 0;
+            justify-content: space-around;
+        }
+        .close-cross {
+            display: none;
+            @media screen and (max-width:$mob) {
+                display: block;
+                position: fixed;
+                top:13%;right:5%;
+
+            }
+        }
         .img-wrapper {
             max-width:40vw;
             max-height:20vw;
+            @media screen and (max-width:$mob) {
+            max-width:100vw;
+            max-height:100vh;
+            }
             .img {
                 height:100%;
                 width:100%;
+                @media screen and (max-width:$mob) {
+                    width:95vw;
+                    height:auto;
+                }
             }
         }
         .desc {
@@ -49,6 +72,10 @@
             height: auto;
             justify-content: space-around;
             align-items: center;
+            
+            @media screen and (max-width:$mob) {
+                width: 100vw;
+            }
             .link {
                 padding: 2%;
                 text-decoration: none;
@@ -60,6 +87,12 @@
                 border:1px solid black;
                 background-color:$main;
                 color:white;
+                
+                @media screen and (max-width:$mob) {
+                    width:40%;
+                    height:70%;
+                    text-align: center;
+                }
             }
         }
     }

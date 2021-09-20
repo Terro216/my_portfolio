@@ -1,12 +1,17 @@
+@import "../app.scss";
 
-    .welcome{
+.welcome{
         width:100vw;
         height:100vh;
         display: flex;
         align-items: center;
+        @media screen and (max-width:$mob) {
+            flex-direction: column;
+            height: 812px; //как на последнем айфоне    /все красиво
+        }
         #particles-js{
             width:100vw;
-            height:100vh;
+            height:100vh;               
             position: absolute;
             top:0;bottom:0;right:0;left:0;
         }
@@ -20,6 +25,16 @@
             display:flex;
             flex-direction: column;
             justify-content: center;
+            @media screen and (max-width:$mob) {
+                font-size: 1.2em;
+                width: 90vw;
+                padding: 0;
+                justify-content: flex-start;
+                text-align: center;
+                .pcHello {
+                    display: none;
+                }
+            }
         }
         .welcome-img{
             z-index:1;
@@ -38,6 +53,20 @@
             figcaption {
                 text-align: center;
             }
+            .mobHello {
+                display: none;
+            }
+            @media screen and (max-width:$mob) {
+                .me {
+                    width:90vw;
+                    height:auto;
+                }
+                .mobHello {
+                    display: block;
+                    text-align: center;
+                    font-size: 3em;
+                }
+            }
         }
         .arrow {
             position: absolute;
@@ -49,6 +78,9 @@
             i{
                 font-size:3em;
             }
-        
+            @media screen and (max-width:$mob) {
+                top:calc(812px - 3em);
+                left:46%;
+            }
         }
     }

@@ -8,6 +8,7 @@ function Modal(props) {
             <div className="close" onClick={props.exit}>
             </div>
             <div className='modal'>
+                <div className='close-cross' onClick={props.exit}>X</div>
                 <div className='title'><h2>{props.title}</h2></div>
                 <div className='img-wrapper'><img className='img' src={props.img} /></div>
                 <div className='desc'><h3>{props.desc}</h3></div>
