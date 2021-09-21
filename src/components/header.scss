@@ -4,6 +4,7 @@
         width:100vw;
         height:100vh;
         display: flex;
+        flex-direction: row;
         align-items: center;
         @media screen and (max-width:$mob) {
             flex-direction: column;
@@ -39,12 +40,12 @@
         .welcome-img{
             z-index:1;
             width:60vw;
-            height:70vh;
+            height:100vh;
             color:grey;
             pointer-events: none;
             user-select: none;
             display:flex;
-            align-items: flex-end;
+            align-items: center;
             justify-content: center;
             .me {
                 width:100%;

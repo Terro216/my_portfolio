@@ -49,17 +49,17 @@ function Portfolio(props) {
         <main className='portf'>
             <h1>Мои работы:</h1>
             <div className='cards'>
-                <Card img={cinema} toggler={() => { props.toggler(cinema, 'Онлайн кинотеатр', 'Онлайн кинотеатр на реакте с использованием react-routing и api кинопоиска', 'https://terro216.github.io/cinema-react', 'https://github.com/Terro216/cinema-react') }} />
+                <Card img={cinema} toggler={() => { props.toggler(cinema, 'Онлайн-кинотеатр', 'Полностью рабочий кинотеатр с функциями поиска по фильмам, просмотра по жанрам и детальным описанием всех фильм. Разработка велась со стэком React/SCSS/react-routing + использовалось unofficial api кинопоиска', 'https://terro216.github.io/cinema-react', 'https://github.com/Terro216/cinema-react') }} />
 
-                <Card img={m} toggler={() => { props.toggler(m, 'Сайт менеджера по туризму', 'Одностраничный лендинг с функцией отправки мейлов с помощью php, верстал на HTML/CSS/Bootstrap. Один из первых сайтов.', 'http://mariamedtours.ru/', 0) }} />
+                <Card img={m} toggler={() => { props.toggler(m, 'Персональная страница для менеджера по туризму', 'Одностраничный сайт с функцией отправки электронных писем(php), подключением iframe\'ов с сайтов других операторов и записью в поездки(SQL). Разработка велась на HTML/CSS/Bootstrap/PHP. Один из первых сайтов', 'http://mariamedtours.ru/', 0) }} />
 
-                <Card img={drum} toggler={() => { props.toggler(drum, 'Drum Pad', 'Можно играть разные мелодии, нажимая на клавиши клавиатуры (или кнопки на экране). Реализована возможность смены громкости и переключения инструментов.', 'https://terro216.github.io/fcc-portfolio/js/drum_machine/dist/index.html', 'https://github.com/Terro216/fcc-portfolio/tree/main/js/drum_machine/src') }} />
+                <Card img={drum} toggler={() => { props.toggler(drum, 'Drum Pad Machine', 'Можно играть разные мелодии, нажимая на клавиши клавиатуры (или кнопки на экране). Реализована возможность смены громкости и состояния(вкл/выкл), переключения инструментов и воспроизведения заранее заданных или случайных мелодий. Разработка велась на HTML/SCSS/React', 'https://terro216.github.io/fcc-portfolio/js/drum_machine/dist/index.html', 'https://github.com/Terro216/fcc-portfolio/tree/main/js/drum_machine/src') }} />
 
-                <Card img={ren} toggler={() => { props.toggler(ren, 'Редактор Текста', 'Markdown редактор на реакте с возможностью просмотра результата прямо во время редактирования', 'https://terro216.github.io/fcc-portfolio/js/react-markdown/dist/index.html', 'https://github.com/Terro216/fcc-portfolio/tree/main/js/react-markdown/src') }} />
+                <Card img={ren} toggler={() => { props.toggler(ren, 'Редактор Текста', 'Markdown редактор на React с динамичным предпросмотром результата', 'https://terro216.github.io/fcc-portfolio/js/react-markdown/dist/index.html', 'https://github.com/Terro216/fcc-portfolio/tree/main/js/react-markdown/src') }} />
 
                 <Card img={quotes} toggler={() => { props.toggler(quotes, 'Цитаты известных людей', 'Небольшое приложение, показывающее разные цитаты по нажатию кнопки. Есть возможность поделиться в соц. сетях', 'https://terro216.github.io/fcc-portfolio/js/random_quote/dist/index.html', 'https://github.com/Terro216/fcc-portfolio/tree/main/js/random_quote/src') }} />
 
-                <Card img={diary} toggler={() => { props.toggler(diary, 'Дневник', 'Чистая вёрстка по макету за сутки в марафоне', 0, 'https://github.com/Terro216/diary-project') }} />
+                <Card img={diary} toggler={() => { props.toggler(diary, 'Дневник', 'Чистая HTML/CSS верстка по заданному макету за 1 день', 0, 'https://github.com/Terro216/diary-project') }} />
             </div>
         </main>
     );

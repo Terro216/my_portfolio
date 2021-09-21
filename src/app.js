@@ -9,7 +9,7 @@ import Instruments from "./components/instruments.js";
 import Portfolio from "./components/portfolio.js";
 import Contact from "./components/contact.js";
 
-function App() {
+function App() { //поменять текст + ограничить колво частиц
 
     const [modalState, changeState] = useState({
         state:0,
