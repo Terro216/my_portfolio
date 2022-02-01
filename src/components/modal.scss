@@ -1,100 +1,102 @@
-@import '../app.scss';
+@import "../app.scss";
 
 .modal-wrapper {
-    display: block;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color:rgb(80, 80, 80, 0.7);
-    z-index:2;
-    .close{
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        z-index:2;
-    }
-    .modal {
-        z-index: 3;
-        background-color: white;
-        border-radius: 10%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color:black;
-        width:60vw;
-        height:75vh;
-        @media screen and (max-width:$mob) {
-            height:80vh; //на айфоне 5 вылезают кнопки...
-            width:100vw;
-            border-radius: 0;
-            justify-content: space-around;
-            text-align: center;
-        }
-        .close-cross {
-            display: none;
-            @media screen and (max-width:$mob) {
-                display: block;
-                position: fixed;
-                top:13%;right:5%;
+	display: block;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(80, 80, 80, 0.7);
+	z-index: 2;
+	.close {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
+	.modal {
+		z-index: 3;
+		background-color: white;
+		border-radius: 2%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: black;
+		width: 60vw;
+		//height: 75vh;
+		height: fit-content;
+		padding: 2% 0;
+		@media screen and (max-width: $mob) {
+			width: 100%;
+			border-radius: 0;
+			justify-content: space-around;
+			text-align: center;
+		}
+		.close-cross {
+			display: none;
+			@media screen and (max-width: $mob) {
+				display: block;
+				position: fixed;
+				top: 20%;
+				right: 5%;
+			}
+		}
+		.img-wrapper {
+			max-width: 40vw;
+			max-height: 20vw;
+			@media screen and (max-width: $mob) {
+				max-width: 100vw;
+				max-height: 100vh;
+			}
+			.img {
+				height: 100%;
+				width: 100%;
+				@media screen and (max-width: $mob) {
+					width: 95vw;
+					height: auto;
+				}
+			}
+		}
+		.desc {
+			width: 80%;
+			height: auto;
+			margin: 1em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		.links {
+			display: flex;
+			width: 100%;
+			height: auto;
+			justify-content: space-around;
+			align-items: center;
 
-            }
-        }
-        .img-wrapper {
-            max-width:40vw;
-            max-height:20vw;
-            @media screen and (max-width:$mob) {
-            max-width:100vw;
-            max-height:100vh;
-            }
-            .img {
-                height:100%;
-                width:100%;
-                @media screen and (max-width:$mob) {
-                    width:95vw;
-                    height:auto;
-                }
-            }
-        }
-        .desc {
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        .links {
-            display: flex;
-            width:100%;
-            height: auto;
-            justify-content: space-around;
-            align-items: center;
-            
-            @media screen and (max-width:$mob) {
-                width: 100vw;
-            }
-            .link {
-                padding: 2%;
-                text-decoration: none;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background-color:black;
-                font-size:1.3em;
-                border:1px solid black;
-                background-color:$main;
-                color:white;
-                
-                @media screen and (max-width:$mob) {
-                    width:40%;
-                    height:70%;
-                    text-align: center;
-                }
-            }
-        }
-    }
+			@media screen and (max-width: $mob) {
+				width: 100vw;
+			}
+			.link {
+				padding: 2%;
+				text-decoration: none;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				background-color: black;
+				font-size: 1.3em;
+				border: 1px solid black;
+				background-color: $main;
+				color: white;
+
+				@media screen and (max-width: $mob) {
+					width: 40%;
+					height: 70%;
+					text-align: center;
+				}
+			}
+		}
+	}
 }
