@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from "react"
-import ReactDOM from "react-dom"
-import "./app.scss"
-import "./files/particles.min.js"
-import { useSpring, animated } from "react-spring"
-import Header from "./components/header.js"
-import Modal from "./components/modal.js"
-import Instruments from "./components/instruments.js"
-import Portfolio from "./components/portfolio.js"
-import Contact from "./components/contact.js"
+import React, { useState } from 'react'
+import ReactDOM from 'react-dom'
+import './app.scss'
+import './scripts/particles.min.js'
+import { useSpring, animated } from 'react-spring'
+import Header from './components/header.js'
+import Modal from './components/modal.js'
+import Instruments from './components/instruments.js'
+import Portfolio from './components/portfolio.js'
+import Contact from './components/contact.js'
 
 function App() {
 	const [modalState, changeState] = useState({
 		state: 0,
 		modalImg: undefined,
-		modalTitle: "",
-		modalDesc: "",
-		modalSite: "",
-		modalSrc: "",
+		modalTitle: '',
+		modalDesc: '',
+		modalSite: '',
+		modalSrc: '',
 	})
 
 	const bodyFade = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } })
@@ -35,7 +35,7 @@ function App() {
 	}
 
 	return (
-		<animated.div style={bodyFade} className="app-wrapper">
+		<animated.div style={bodyFade} className='app-wrapper'>
 			<Modal
 				exit={toggleModal}
 				state={modalState.state}
@@ -57,4 +57,4 @@ function App() {
 	)
 }
 
-ReactDOM.render(<App />, document.getElementById("root"))
+ReactDOM.render(<App />, document.getElementById('root'))

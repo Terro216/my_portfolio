@@ -1,3 +1,5 @@
+@import '../app.scss';
+
 .contact {
 	width: 100vw;
 	height: auto;
@@ -11,30 +13,45 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
 		background-color: lightgreen;
 		color: black;
 		margin: 0 auto;
 		text-decoration: none;
-		font-size: 1.4em;
-		width: 180px;
-		height: 45px;
-		padding: 15px;
-		border-radius: 1%;
+		font-size: 1.6em; //1.4
+		font-weight: bold;
+		width: 20%; //width: 180px;
+		//height: 50%; //height: 45px;
+		padding: 2%; //padding: 15px;
+		border-radius: 10px;
+		will-change: background-color;
 		transition: background-color 200ms ease;
-		&:hover {
+		&:hover,
+		&:focus {
 			background-color: #4ee44e;
-			transition: background-color 200ms ease;
+		}
+		@media screen and (max-width: $mob) {
+			width: 50%;
+			padding: 5%;
 		}
 	}
 	.contact-buttons {
+		width: 50%;
+		margin: 0 auto;
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
+		flex-wrap: wrap;
+		padding: 4% 0;
+		@media screen and (max-width: $mob) {
+			padding: 10% 0;
+			width: 100%;
+			margin: 0 auto;
+		}
 		.contact-button {
 			.fab {
-				padding: 20px;
-				margin: 30% 20px;
-				font-size: 1.8em;
+				padding: 0.6em; //20px;
+				font-size: 2em;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -42,9 +59,9 @@
 				border-radius: 15%;
 				transform: scale(1);
 				transition: transform 100ms ease;
-				&:hover {
+				&:hover,
+				&:focus {
 					transform: scale(1.2);
-					transition: transform 100ms ease;
 				}
 			}
 			.fa-vk {
@@ -53,6 +70,10 @@
 			}
 			.fa-github {
 				background-color: black;
+				color: white;
+			}
+			.fa-telegram {
+				background-color: #0088cc;
 				color: white;
 			}
 			.fa-instagram {
