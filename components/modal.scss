@@ -38,15 +38,17 @@
 		position: relative;
 		.close-cross {
 			display: block;
-			right: 5%;
 			position: absolute;
+			right: 5%;
 			top: 4%;
+			padding: 1%;
 			cursor: pointer;
 			@media screen and (max-width: $mob) {
 				display: block;
 				right: 5%;
 				position: absolute;
-				top: 2%;
+				top: 3%;
+				padding: 0%;
 			}
 		}
 		.img-wrapper {

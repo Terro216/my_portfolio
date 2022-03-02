@@ -8,7 +8,7 @@ function Modal(props) {
 				<div className='close' onClick={props.exit}></div>
 				<div className='modal'>
 					<div className='close-cross' onClick={props.exit}>
-						X
+						<i class='fas fa-times fa-2x'></i>
 					</div>
 					<div className='title'>
 						<h2>{props.title}</h2>

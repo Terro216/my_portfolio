@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import './app.scss'
 import './scripts/particles.min.js'
@@ -18,6 +18,10 @@ function App() {
 		modalSite: '',
 		modalSrc: '',
 	})
+
+	useEffect(() => {
+		particlesJS.load('particles-js', './particles.json')
+	}, [])
 
 	const bodyFade = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } })
 
