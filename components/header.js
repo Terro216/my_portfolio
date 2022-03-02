@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import dreamer from '../files/dreamer.png'
+import '../scripts/particles.min.js'
 import './header.scss'
 
 function Header() {
+	useEffect(() => {
+		particlesJS.load('particles-js', './particles.json') //maybe delete from app...
+	}, [])
 	return (
 		<header className='welcome'>
 			<div id='particles-js'></div>

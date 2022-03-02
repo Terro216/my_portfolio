@@ -32,7 +32,10 @@ const Card = (props) => {
 	return (
 		<animated.div
 			className='card'
-			onClick={props.toggler}
+			onClick={() => {
+				set([0, 0, 1]) //add for fix bug on iphones
+				props.toggler()
+			}}
 			ref={ref}
 			style={{ transform: s.xys.to(trans) }}
 			onMouseLeave={() => set([0, 0, 1])}

@@ -18,11 +18,9 @@ function App() {
 		modalSite: '',
 		modalSrc: '',
 	})
-
 	useEffect(() => {
-		particlesJS.load('particles-js', './particles.json')
+		particlesJS.load('particles-js', './particles.json') //maybe delete from app...
 	}, [])
-
 	const bodyFade = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } })
 
 	function toggleModal(img, title, desc, site, src) {
