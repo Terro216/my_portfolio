@@ -26,10 +26,6 @@
 			@media screen and (max-width: $mob) {
 				max-width: 90vw;
 			}
-			&:hover,
-			&:focus {
-				box-shadow: dark 5px 5px;
-			}
 			.card-img {
 				width: 100%;
 				height: 100%;

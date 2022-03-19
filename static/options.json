@@ -1,0 +1,92 @@
+{
+	"background": {
+		"color": {
+			"value": "inherit"
+		}
+	},
+	"fullScreen": {
+		"enable": false
+	},
+	"interactivity": {
+		"events": {
+			"onClick": {
+				"enable": true,
+				"mode": "push"
+			},
+			"onHover": {
+				"enable": true,
+				"mode": "grab",
+				"parallax": {
+					"enable": true,
+					"force": 50
+				}
+			}
+		},
+		"modes": {
+			"bubble": {
+				"distance": 200,
+				"size": 10,
+				"duration": 0.2,
+				"opacity": 0.8,
+				"speed": 5
+			},
+			"grab": {
+				"distance": 300,
+				"line_linked": {
+					"opacity": 1.2
+				}
+			}
+		}
+	},
+	"particles": {
+		"color": {
+			"value": "#ffffff"
+		},
+		"links": {
+			"color": {
+				"value": "#ffffff"
+			},
+			"distance": 150,
+			"enable": true,
+			"opacity": 0.4
+		},
+		"move": {
+			"attract": {
+				"rotate": {
+					"x": 600,
+					"y": 1200
+				}
+			},
+			"enable": true,
+			"out_mode": "bounce"
+		},
+		"number": {
+			"value": 100,
+			"density": {
+				"enable": true
+			}
+		},
+		"opacity": {
+			"random": {
+				"enable": true
+			},
+			"value": {
+				"min": 0.1,
+				"max": 1
+			}
+		},
+		"size": {
+			"random": {
+				"enable": true
+			},
+			"value": {
+				"min": 1,
+				"max": 6
+			}
+		},
+		"collisions": {
+			"enable": true,
+			"mode": "bounce"
+		}
+	}
+}

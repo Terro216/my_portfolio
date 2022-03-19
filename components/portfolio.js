@@ -11,6 +11,21 @@ import imgupl from '../files/imgupl.png'
 import { useSpring, animated } from 'react-spring'
 
 const Card = (props) => {
+	if (window.matchMedia('(max-width: 450px)').matches) {
+		//off animation on mobiles
+		return (
+			<div className='card' onClick={props.toggler}>
+				<div className='card-img-wrapper'>
+					<img
+						className='card-img'
+						src={props.img}
+						alt={'скриншот сайта ' + props.title}
+						width='1420'
+						height='760'></img>
+				</div>
+			</div>
+		)
+	}
 	const calc = (x, y, rect) => [
 		-(y - rect.top - rect.height / 2) / 20,
 		(x - rect.left - rect.width / 2) / 20,
@@ -32,10 +47,7 @@ const Card = (props) => {
 	return (
 		<animated.div
 			className='card'
-			onClick={() => {
-				set([0, 0, 1]) //add for fix bug on iphones
-				props.toggler()
-			}}
+			onClick={props.toggler}
 			ref={ref}
 			style={{ transform: s.xys.to(trans) }}
 			onMouseLeave={() => set([0, 0, 1])}

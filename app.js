@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import './app.scss'
-import './scripts/particles.min.js'
 import { useSpring, animated } from 'react-spring'
 import Header from './components/header.js'
 import Modal from './components/modal.js'
@@ -18,9 +17,7 @@ function App() {
 		modalSite: '',
 		modalSrc: '',
 	})
-	useEffect(() => {
-		particlesJS.load('particles-js', './particles.json') //maybe delete from app...
-	}, [])
+
 	const bodyFade = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } })
 
 	function toggleModal(img, title, desc, site, src) {

@@ -12,10 +12,10 @@
 		justify-content: space-around;
 		height: 100vh; //812px;
 	}
-	#particles-js {
+	.tsparticles {
+		position: absolute;
 		width: 100vw;
 		height: 100vh;
-		position: absolute;
 		top: 0;
 		bottom: 0;
 		right: 0;
